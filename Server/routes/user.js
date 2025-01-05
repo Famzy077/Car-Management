@@ -1,9 +1,9 @@
-import express from 'express'
-import bcrypt from 'bcryptjs'
-import jwt from 'jsonwebtoken'
+const express = require('express')
+const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 const router = express.Router();
-import { User } from '../model/User.js';
-import nodemailer from 'nodemailer'
+const { User } = require( '../model/User.js');
+const nodemailer = require('nodemailer');
 
 router.post('/signup', async (req, res) => {
     const {username, email, password} = req.body;
@@ -117,4 +117,4 @@ router.get('/logout', (req, res) => {
     res.clearCookie('token')
     return res.json({status: true})
 })
-export default router
+module.exports router
