@@ -4,7 +4,7 @@
   "main": "loader.cjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon loader.cjs"
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",

@@ -117,4 +117,4 @@ router.get('/logout', (req, res) => {
     res.clearCookie('token')
     return res.json({status: true})
 })
-module.exports router
+module.exports = router
